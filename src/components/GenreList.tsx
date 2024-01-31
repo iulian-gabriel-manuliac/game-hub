@@ -11,8 +11,8 @@ import useGenres, { Genre } from "../react-query/hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
 interface Props {
-  onSelectGenre: (genre: Genre) => void;
-  selectedGenre: Genre | null;
+  onSelectGenre: (genre: number) => void;
+  selectedGenre?: number;
 }
 
 const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
@@ -42,9 +42,9 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 src={getCroppedImageUrl(genre.image_background)}
               />
               <Button
-                onClick={() => onSelectGenre(genre)}
+                onClick={() => onSelectGenre(genre.id)}
                 fontSize="lg"
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenre ? "bold" : "normal"}
                 variant="link"
                 whiteSpace="normal"
                 textAlign="left"
