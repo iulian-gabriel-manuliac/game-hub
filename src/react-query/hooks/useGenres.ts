@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import genres from "../../data/genres";
+import genresData from "../../data/genres";
 import { CACHE_KEY_GENRES } from "../constants";
 import genreService from "../services/genreService";
 
@@ -14,7 +14,7 @@ const useGenres = () => {
     queryKey: CACHE_KEY_GENRES,
     queryFn: genreService.getAll,
     staleTime: 24 * 60 * 60 * 1000, // 24 hours
-    //initialData: { count: genres.length, results: genres },
+    initialData: genresData,
   });
 };
 
