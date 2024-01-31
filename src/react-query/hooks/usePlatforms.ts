@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import ms from "ms";
 import { CACHE_KEY_PLATFORMS } from "../constants";
 import platformService from "../services/platformService";
 
@@ -12,7 +13,7 @@ const usePlatforms = () => {
   return useQuery({
     queryKey: CACHE_KEY_PLATFORMS,
     queryFn: platformService.getAll,
-    staleTime: 10 * 1000,
+    staleTime: ms("10s"),
   });
 };
 
