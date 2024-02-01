@@ -1,9 +1,9 @@
 import useGenres from "./useGenres";
 
-const usePlatform = (id?: number) => {
+const useGenre = (id?: number) => {
   const { data } = useGenres();
 
   return data?.results.find((g) => g.id === id);
 };
 
-export default usePlatform;
+export default useGenre;
