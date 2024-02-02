@@ -28,7 +28,6 @@ const GameTrailer = ({ game }: Props) => {
     firstTrailer && (
       <video
         controls
-        width="100%"
         src={firstTrailer.data["480"]}
         poster={firstTrailer.preview}
       ></video>
