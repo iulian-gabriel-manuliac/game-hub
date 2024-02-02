@@ -1,6 +1,6 @@
 import { Text, Spinner } from "@chakra-ui/react";
 import useTrailers from "../react-query/hooks/useTrailers";
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 
 interface Props {
   game: Game;

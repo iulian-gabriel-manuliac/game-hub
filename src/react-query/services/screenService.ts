@@ -1,5 +1,5 @@
 import APIClient from "./apiClient";
-import { Screen } from "../../entities/Screen";
+import Screen from "../../entities/Screen";
 
 const screenService = (id: number) => {
   return new APIClient<Screen>(`/games/${id}/screenshots`);
