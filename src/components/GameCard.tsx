@@ -4,7 +4,7 @@ import CriticScore from "./CriticScore";
 import Emoji from "./Emoji";
 import PlatformIconList from "./PlatformIconList";
 import { Link } from "react-router-dom";
-import { Game } from "../react-query/services/gameService";
+import { Game } from "../entities/Game";
 
 interface Props {
   game: Game;
