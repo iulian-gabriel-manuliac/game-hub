@@ -39,7 +39,7 @@ const GameGrid = () => {
           <Text>No game found</Text>
         )}
         {!isLoading &&
-          data?.pages.map((page, index) => (
+          data?.pages?.map((page, index) => (
             <React.Fragment key={index}>
               {page.results.map((game) => (
                 <GameCardContainer key={game.id}>
