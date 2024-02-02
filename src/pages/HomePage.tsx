@@ -5,6 +5,8 @@ import GenreList from "../components/GenreList";
 import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
 
+// test GitHub integration with Vercel
+
 const HomePage = () => {
   return (
     <Grid
